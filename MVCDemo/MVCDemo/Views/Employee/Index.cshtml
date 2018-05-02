@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<table border="1">
+    <tr>
+        <th>EmpId</th>
+        <th>EmpName</th>
+        <th>EmpSalary</th>
+    </tr>
+    @foreach (var item in ViewBag.Employees)
+    { 
+    <tr>
+        <td>@item.EmpId</td>
+        <td>@item.EmpName</td>
+        <td>@item.EmpSalary</td>
+    </tr>
+    }
+</table>
